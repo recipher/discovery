@@ -15,7 +15,19 @@ describe('discover', function() {
     var discover = sinon.stub()
       , host = sut(discover)('user');
 
-    discover.should.be.called;    
+    discover.should.be.calledWith('user');    
+  });
+ 
+  it('should throw if service is undefined', function() {
+    (function() {
+      sut(sinon.stub())()
+    }).should.throw(Error);
+  });
+ 
+  it('should throw if service is empty', function() {
+    (function() {
+      sut(sinon.stub())('')
+    }).should.throw(Error);
   });
 	
 });
