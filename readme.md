@@ -12,7 +12,7 @@ var register = require('@recipher/discovery').register;
 register('user', 'https://users.api.recipher.co.uk');
 ```
 
-To discovery services:
+To discover services:
 
 ```
 var discover = require('@recipher/discovery').discover;

@@ -4,7 +4,7 @@
   "description": "Service discovery",
   "main": "node index",
   "scripts": {
-    "test": "gulp test"
+    "test": "NODE_ENV=test gulp test"
   },
   "engines": {
     "node": ">= 0.12.x",
@@ -17,14 +17,16 @@
     "url": "git@github.com:recipher/discovery.git"
   },
   "dependencies": {
-    "@recipher/configuration": "^1.0.0"
+    "@recipher/configuration": "^1.0.0",
+    "node-etcd": "^5.0.3"
   },
   "devDependencies": {
     "@recipher/gulp": "^1.0.0",
     "chai": "^3.4.1",
+    "chai-as-promised": "^6.0.0",
     "gulp": "^3.9.0",
     "mocha": "^2.3.4",
-    "sandboxed-module": "^2.0.3",
+    "proxyquire": "^1.7.10",
     "sinon": "^1.17.2",
     "sinon-as-promised": "^4.0.0",
     "sinon-chai": "^2.8.0"

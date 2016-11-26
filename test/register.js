@@ -1,5 +1,4 @@
-var should = require('chai').should()
-  , sut = require('../lib').register;
+var sut = require('../lib').register;
   
 describe('register', function() {
     
